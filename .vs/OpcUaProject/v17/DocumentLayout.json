@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|solutionrelative:opcuaproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\opcuaproject\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\opcuaproject\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\opcuaproject\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\opcuaproject\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\opcuaproject\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\opcuaproject\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\opcuaproject\\opcuaproject.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\opcuaproject\\opcuaproject.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\scripts\\mosquitto.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|solutionrelative:opcuaproject\\scripts\\mosquitto.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\license||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\OpcUaProject.csproj|solutionrelative:opcuaproject\\license||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|c:\\users\\luciano.brido\\source\\repos\\opcuaproject\\opcuaproject\\opcuaproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD1403CE-957A-4457-ACB1-01D14B06F37B}|OpcUaProject\\industrial-iot-opcua.csproj|solutionrelative:opcuaproject\\opcuaproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,12 +79,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\.gitignore",
+              "RelativeDocumentMoniker": "OpcUaProject\\.gitignore",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\.gitignore",
+              "RelativeToolTip": "OpcUaProject\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-06T21:34:22.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADgvyEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T21:31:53.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "OpcUaProject\\OpcUaProject\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T21:28:58.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\packages.config",
+              "RelativeDocumentMoniker": "OpcUaProject\\OpcUaProject\\packages.config",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\packages.config",
+              "RelativeToolTip": "OpcUaProject\\OpcUaProject\\packages.config",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwDUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-06T21:27:33.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\App.config",
+              "RelativeDocumentMoniker": "OpcUaProject\\OpcUaProject\\App.config",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\App.config",
+              "RelativeToolTip": "OpcUaProject\\OpcUaProject\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-06T21:27:16.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OpcUaProject.csproj",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\OpcUaProject.csproj",
+              "RelativeDocumentMoniker": "OpcUaProject\\OpcUaProject\\OpcUaProject.csproj",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\OpcUaProject.csproj",
+              "RelativeToolTip": "OpcUaProject\\OpcUaProject\\OpcUaProject.csproj",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswIEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-06T21:26:54.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "mosquitto.conf",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\scripts\\mosquitto.conf",
+              "RelativeDocumentMoniker": "OpcUaProject\\scripts\\mosquitto.conf",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\scripts\\mosquitto.conf",
+              "RelativeToolTip": "OpcUaProject\\scripts\\mosquitto.conf",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAgwMsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-06T21:22:57.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LICENSE",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\LICENSE",
+              "RelativeDocumentMoniker": "OpcUaProject\\LICENSE",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\LICENSE",
+              "RelativeToolTip": "OpcUaProject\\LICENSE",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-06T16:40:12.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\Program.cs",
-              "RelativeDocumentMoniker": "OpcUaProject\\Program.cs",
-              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\Program.cs",
-              "RelativeToolTip": "OpcUaProject\\Program.cs",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAgwCIBAAABAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\Program.cs",
+              "RelativeDocumentMoniker": "OpcUaProject\\OpcUaProject\\Program.cs",
+              "ToolTip": "C:\\Users\\luciano.brido\\source\\repos\\OpcUaProject\\OpcUaProject\\OpcUaProject\\Program.cs",
+              "RelativeToolTip": "OpcUaProject\\OpcUaProject\\Program.cs",
+              "ViewState": "AgIAAAMBAAAAAAAAAAAgwCIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T15:18:51.141Z",
               "EditorCaption": ""

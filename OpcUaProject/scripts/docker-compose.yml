@@ -1,0 +1,258 @@
+﻿# =============================================================================
+# Industrial IoT OPC UA - Docker Compose Configuration
+# =============================================================================
+# This docker-compose file sets up the complete development environment
+# for the Industrial IoT OPC UA project including PostgreSQL, Grafana,
+# InfluxDB, Redis and MQTT broker.
+
+version: '3.8'
+
+services:
+  # PostgreSQL Database - Primary data storage
+  postgres:
+    image: postgres:15-alpine
+    container_name: opcua-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: OpcUaDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./setup-database.sql:/docker-entrypoint-initdb.d/setup-database.sql
+    networks:
+      - opcua-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d OpcUaDb"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # InfluxDB - Time series database for IoT data
+  influxdb:
+    image: influxdb:2.7-alpine
+    container_name: opcua-influxdb
+    restart: unless-stopped
+    environment:
+      INFLUXDB_DB: opcua_timeseries
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_PASSWORD: influx123
+      INFLUXDB_HTTP_AUTH_ENABLED: "false"
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    networks:
+      - opcua-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Redis - Cache and real-time messaging
+  redis:
+    image: redis:7-alpine
+    container_name: opcua-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass redis123
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - opcua-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Eclipse Mosquitto - MQTT Broker
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    container_name: opcua-mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"      # MQTT
+      - "9001:9001"      # WebSocket
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_logs:/mosquitto/log
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - opcua-network
+    healthcheck:
+      test: ["CMD-SHELL", "mosquitto_pub -h localhost -t test -m 'health-check' && mosquitto_sub -h localhost -t test -C 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Grafana - Data visualization and dashboards
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: opcua-grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: grafana123
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_SECURITY_ALLOW_EMBEDDING: "true"
+      GF_INSTALL_PLUGINS: grafana-clock-panel,grafana-simple-json-datasource,grafana-worldmap-panel
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - grafana_config:/etc/grafana
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - opcua-network
+    depends_on:
+      - postgres
+      - influxdb
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # pgAdmin - PostgreSQL administration tool
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: opcua-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@opcua.local
+      PGADMIN_DEFAULT_PASSWORD: pgadmin123
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - opcua-network
+    depends_on:
+      - postgres
+
+  # Node-RED - Visual flow programming for IoT
+  nodered:
+    image: nodered/node-red:latest
+    container_name: opcua-nodered
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Lisbon
+    ports:
+      - "1880:1880"
+    volumes:
+      - nodered_data:/data
+    networks:
+      - opcua-network
+    depends_on:
+      - mosquitto
+      - influxdb
+
+  # OPC UA Simulator (Optional - if you don't have Prosys)
+  opcua-simulator:
+    image: mcr.microsoft.com/iotedge/opc-plc:latest
+    container_name: opcua-simulator
+    restart: unless-stopped
+    ports:
+      - "50000:50000"
+    environment:
+      - PLC_SIMULATION_ENABLED=true
+    networks:
+      - opcua-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:50000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+# Networks
+networks:
+  opcua-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# Volumes for persistent data
+volumes:
+  postgres_data:
+    driver: local
+  influxdb_data:
+    driver: local
+  influxdb_config:
+    driver: local
+  redis_data:
+    driver: local
+  mosquitto_data:
+    driver: local
+  mosquitto_logs:
+    driver: local
+  grafana_data:
+    driver: local
+  grafana_config:
+    driver: local
+  pgadmin_data:
+    driver: local
+  nodered_data:
+    driver: local
+
+# =============================================================================
+# Usage Instructions:
+# =============================================================================
+#
+# 1. Start all services:
+#    docker-compose up -d
+#
+# 2. Start specific services:
+#    docker-compose up -d postgres grafana
+#
+# 3. View logs:
+#    docker-compose logs -f [service-name]
+#
+# 4. Stop all services:
+#    docker-compose down
+#
+# 5. Stop and remove all data:
+#    docker-compose down -v
+#
+# 6. Restart a service:
+#    docker-compose restart [service-name]
+#
+# =============================================================================
+# Service URLs (after startup):
+# =============================================================================
+#
+# PostgreSQL:     localhost:5432
+# InfluxDB:       http://localhost:8086
+# Redis:          localhost:6379
+# MQTT:           localhost:1883
+# Grafana:        http://localhost:3000 (admin/grafana123)
+# pgAdmin:        http://localhost:5050 (admin@opcua.local/pgadmin123)
+# Node-RED:       http://localhost:1880
+# OPC Simulator:  opc.tcp://localhost:50000
+#
+# =============================================================================
+# Connection Strings:
+# =============================================================================
+#
+# PostgreSQL:
+# Host=localhost;Port=5432;Database=OpcUaDb;Username=postgres;Password=postgres123
+#
+# InfluxDB:
+# http://localhost:8086 (admin/influx123)
+#
+# Redis:
+# localhost:6379 (password: redis123)
+#
+# MQTT:
+# mqtt://localhost:1883
+#
+# =============================================================================
